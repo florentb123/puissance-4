@@ -1,4 +1,5 @@
 
+// Fonction de création du board
 function createBoard(ligne,colonne){
     // On vide l'affichage
     contenuElt.innerHTML="";
@@ -28,6 +29,8 @@ function createBoard(ligne,colonne){
     // ajout du tableau au contenu
     contenuElt.appendChild(tableElt);
 }
+
+// Fonction d'initialisation d'une nouvelle partie
 function newGame(){
     createBoard(ligne,colonne);
     createEvent(ligne,colonne);
@@ -35,42 +38,6 @@ function newGame(){
 
 
 // Fonction d'ajout des évènement click sur le tableau
-function createEvent(ligne,colonne){
-    // On créé les évènements sur les cases
-    for (let i=0; i<ligne;i++){
-        for (let j=0; j<colonne; j++){
-            //ajoutEventCase(i,j);
-            let caseElt=document.getElementById("L"+i+"C"+j);
-            caseElt.addEventListener('click',clickEvent);
-        };
-    };
-}
-
-// Fonction clickEvent
-function clickEvent(){
-    let l=Number(this.id.charAt(3));
-    let k=ligne-1;
-        while (k>-1){
-            if (board[k][l]==0){
-                let caseMinElt=document.getElementById("L"+k+"C"+l);
-                let divElt=document.createElement('div');
-                divElt.className="player";
-                caseMinElt.appendChild(divElt);
-                divElt.style.backgroundColor=player==1?"red":"yellow";
-                board[k][l]=player;
-                // Ici placé la vérification de victoire
-                verifVictoire(k,l);
-                player*=-1;
-                k=-1;
-            }
-            else {
-            k--
-            };
-        };
-}
-
-
-// Fonction de Vérification de victoire
 
 function verifVictoire(i,j){
     // Vérification horizontale
@@ -88,44 +55,7 @@ function verifVictoire(i,j){
             countLigne=0;
             h++;
         };
-    };
-    
-    // Vérification verticale
-    let countColonne=0;
-    let v=0;
-    while (v<ligne){
-        if (board[v][j]==player){
-            countColonne++;
-            v++;
-        }
-        else if (board[v][j]!==player&&countColonne==4){
-            v++;
-        }
-        else {
-            countColonne=0;
-            v++;
-        };
-    };
-    
-    // Vérification diagonale
-    let countDiag=0;
-    let d=-Math.min(i,j);
-    
-    while(i+d<ligne&&j+d<colonne&&i+d>=0&&j+d>=0){
-        
-        if (board[i+d][j+d]==player){
-            countDiag++;
-            d++;
-        }
-        else if (board[i+d][j+d]!==player&&countDiag==4){
-            d++;
-        }
-        else {
-            countDiag=0;
-            d++;
-        };
-    };
-    
+    }; 
     // Vérification anti-diagonale
     let countAntiDiag=0;
     let a=-Math.min(i,colonne-1-j);
@@ -143,24 +73,11 @@ function verifVictoire(i,j){
         };
     } ;
     
-    
     // Affichage Résultat
     if (countLigne>=4||countColonne>=4||countDiag>=4||countAntiDiag>=4){
         
-        victoire=true;
-        // Affichage Vainqueur
-        let gagnant=(player==1)?"Rouge":"Jaune";
-        let victoireElt=document.createElement('div');
-        victoireElt.innerHTML="<h2>Le vainqueur est "+gagnant+" </h2>";
-        contenuElt.appendChild(victoireElt);
         // On supprime les évènements clics
         for (let i=0; i<ligne;i++){
-            for (let j=0; j<colonne; j++){
-               let caseElt=document.getElementById("L"+i+"C"+j);
-                caseElt.style.backgroundColor="blue";
-                caseElt.removeEventListener('click',clickEvent);
-              
-            };
         };
        
     }
@@ -170,12 +87,12 @@ function verifVictoire(i,j){
     };
 }
 
-
 // Initialisation
 let colonne=5;
 let ligne=5;
 let board=new Array();
 let contenuElt=document.getElementById('contenu');
+
 let player=1;
 
 let boutonElt = document.getElementById('newGame');
