@@ -1,5 +1,4 @@
-// début partie florent
-
+// début partie chaharazed
 class Puissance4 {
     /*
       Intialise un plateau de jeu de dimensions `rows` × `cols` (par défaut 6×7),
@@ -67,33 +66,31 @@ class Puissance4 {
       // On compte le coup
       this.moves++;
       }
+//  partie chaharazed
   
-// fin partie florent
-
-
-
-
-//début partie désirée
-// ajouter un pion dans une colonne
-
+  
+  
+  //début partie désirée
+  // ajouter un pion dans une colonne
+  
       play(column) {
       // Trouver la première case libre dans la colonne
       let row;
-    // information sur le numero de colonne
-    //regarde depuis le bas si les row sont libres
+      // information sur le numero de colonne
+      //regarde depuis le bas si les row sont libres
       for (let i = 0; i < this.rows; i++) {
         if (this.board[i][column] == 0) {
           row = i;
           break;
         }
       }
-
-    //   si pas de row libres faux
+  
+      // si pas de row libres: faux
       if (row === undefined) {
         return null;
       } 
-
-    // sinon retourner le nombre de la row
+  
+      // sinon retourner le numero de la row
       else {
         this.set(row, column, this.turn);
         return row;
@@ -102,7 +99,7 @@ class Puissance4 {
     
     handle_click(event) {
       // Vérifier si il n'y a pas encore de gagnant
-    
+  
       if (this.winner !== null) {
             if (window.confirm("Perdu! Souhaitez-vous rejouer?")) {
                 this.reset();
@@ -111,46 +108,46 @@ class Puissance4 {
               return;
       }
   
-let column = event.target.dataset.column;
-if (column !== undefined) {
-//attention, les variables dans les datasets sont TOUJOURS 
-//des chaînes de caractères. Si on veut être sûr de ne pas faire de bêtise,
-//il vaut mieux la convertir en entier avec parseInt
-column = parseInt(column);
-    let row = this.play(parseInt(column));
+        let column = event.target.dataset.column;
+        if (column !== undefined) {
+        //attention, les variables dans les datasets sont TOUJOURS 
+        //des chaînes de caractères. Si on veut être sûr de ne pas faire de bêtise,
+        //il vaut mieux la convertir en entier avec parseInt
+        column = parseInt(column);
+           let row = this.play(parseInt(column));
         
-if (row === null) {
-    window.alert("la colonne est pleine!");
-} else {
-    // Vérifier s'il y a un gagnant, ou si la partie est finie
-    if (this.win(row, column, this.turn)) {
-    this.winner = this.turn;
-    } else if (this.moves >= this.rows * this.columns) {
-    this.winner = 0;
-    }
-    // Passer le tour : 3 - 2 = 1, 3 - 1 = 2
-    this.turn = 3 - this.turn;
+        if (row === null) {
+          window.alert("la colonne est pleine!");
+        } else {
+          // Vérifier s'il y a un gagnant, ou si la partie est finie
+          if (this.win(row, column, this.turn)) {
+            this.winner = this.turn;
+          } else if (this.moves >= this.rows * this.columns) {
+            this.winner = 0;
+          }
+          // Passer le tour : 3 - 2 = 1, 3 - 1 = 2
+          this.turn = 3 - this.turn;
   
-    // Mettre à jour l'affichage
-    this.render()
+          // Mettre à jour l'affichage
+          this.render()
           
-    //Au cours de l'affichage, pensez eventuellement, à afficher un 
-    //message si la partie est finie...
-    switch (this.winner) {
-    case 0: 
-        window.alert("Match null!!"); 
-        break;
-    case 1:
-        window.alert("Le joueur 1 a gagné  ");
-        break;
-    case 2:
-        window.alert("Le joueur deux à gagné"); 
-        break;
+          //Au cours de l'affichage, pensez eventuellement, à afficher un 
+          //message si la partie est finie...
+          switch (this.winner) {
+            case 0: 
+              window.alert("Match null!!"); 
+              break;
+            case 1:
+              window.alert("Le joueur 1 a gagné  "); 
+              break;
+            case 2:
+              window.alert("Le joueur deux à gagné"); 
+              break;
+          }
+        }
+      }
     }
-}
-}
-}
-
+  
     /* 
      Cette fonction vérifie si le coup dans la case `row`, `column` par
      le joueur `player` est un coup gagnant.
@@ -206,5 +203,5 @@ if (row === null) {
   // On initialise le plateau et on visualise dans le DOM
   // (dans la balise d'identifiant `game`).
   let p4 = new Puissance4('#game');
-
-//   fin partie desiree
+  
+  //fin partie desiree
