@@ -1,20 +1,38 @@
-#jeu table {
-    border: 15px blue outset;
-    background-color: blue;
+table{
+    margin: auto;
+    border: 25px solid rgb(184, 24, 24);
+    
 }
-#jeu td {
-    width: 2cm;
-    height: 2cm;
-    margin: 0px;
-    padding: 0px;
-    border: 2px blue inset;
-    border-radius: 2cm;
-    background-color: white;
-    cursor: pointer;
+
+td {
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 50px;
+    height:60px ;
+    width:60px ;
+    text-align: center;
 }
-#jeu td.player1 {
-    background-color: red;
+
+tr {
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 50px;
 }
-#jeu td.player2 {
-    background-color: yellow;
+
+.player {
+    margin-top:5px;
+    border-radius: 170px 170px;
+    width:50px;
+    height: 50px;
+    display: inline-block;
+    
+}
+button{
+    margin-top: 10px;
+    height: 30px;
+    color: cyan;
+    border: 1px solid rgb(93, 16, 16);
+    background-color: salmon;
+   
 }
