@@ -1,1 +1,1 @@
-ok
+tableau = new.array
