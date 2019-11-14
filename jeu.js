@@ -1,5 +1,79 @@
-//début partie pions désirée
+// début partie florent
 
+class Puissance4 {
+    /*
+      Intialise un plateau de jeu de dimensions `rows` × `cols` (par défaut 6×7),
+      et fait l'affichage dans l'élément `element_id` du DOM.
+     */
+    constructor(element_id, rows=6, cols=7) {
+      // Nombre de lignes et de colonnes
+      this.rows = rows;
+      this.cols = cols;
+        // cet tableau à deux dimensions contient l'état du jeu:
+      //   0: case vide
+      //   1: pion du joueur 1
+      //   2: pion du joueur 2
+      this.board = Array(this.rows);
+      for (let i = 0; i < this.rows; i++) {
+        this.board[i] = Array(this.cols).fill(0);
+      }
+      // un entier: 1 ou 2 (le numéro du prochain joueur)
+      this.turn = 1;
+      // Nombre de coups joués
+      this.moves = 0;
+      /* un entier indiquant le gagnant:
+          null: la partie continue
+             0: la partie est nulle
+             1: joueur 1 a gagné
+             2: joueur 2 a gagné
+      */
+      this.winner = null;
+  
+      // L'élément du DOM où se fait l'affichage
+      this.element = document.querySelector(element_id);
+      // On ajoute le gestionnaire d'événements pour gérer le click
+      //
+      // Pour des raisons techniques, il est nécessaire de passer comme gestionnaire
+      // une fonction anonyme faisant appel à `this.handle_click`. Passer directement
+      // `this.handle_click` comme gestionnaire, sans wrapping, rendrait le mot clef
+      // `this` inutilisable dans le gestionnaire. Voir le "binding de this".
+      this.element.addEventListener('click', (event) => this.handle_click(event));
+      // On fait l'affichage
+      this.render();
+    }
+    
+    /* Affiche le plateau de jeu dans le DOM */
+    render() {
+      let table = document.createElement('table');
+      //ATTENTION, la page html est écrite de haut en bas. Les indices 
+      //pour le jeu vont de bas en haut (compteur i de la boucle)
+      for (let i = this.rows - 1; i >= 0; i--) {
+        let tr = table.appendChild(document.createElement('tr'));
+        for (let j = 0; j < this.cols; j++) {
+          let td = tr.appendChild(document.createElement('td'));
+          let colour = this.board[i][j];
+          if (colour)
+            td.className = 'player' + colour;
+          td.dataset.column = j;
+        }
+      }
+      this.element.innerHTML = '';
+      this.element.appendChild(table);
+    }
+    
+      set(row, column, player) {
+      // On colore la case
+        this.board[row][column] = player;
+      // On compte le coup
+      this.moves++;
+      }
+  
+// fin partie florent
+
+
+
+
+//début partie désirée
 // ajouter un pion dans une colonne
 
       play(column) {
@@ -133,4 +207,4 @@ if (row === null) {
   // (dans la balise d'identifiant `game`).
   let p4 = new Puissance4('#game');
 
-  //fin partie pions désirée
+//   fin partie desiree
