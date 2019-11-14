@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #game table {
     border: 3px blue outset;
     background-color: blue;
@@ -17,4 +18,57 @@
 }
 #game td.player2 {
     background-color: yellow;
+=======
+body{
+    text-align:center;
+}
+table {
+    margin: auto;
+
+    
+}
+
+td {
+    margin: auto;
+    background: rgb(182, 169, 169);
+    border-radius: 50px;
+    height:60px ;
+    width:60px ;
+    text-align: center;
+}
+td:hover{
+   opacity: 0.5;
+}
+
+tr {
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 50px;
+}
+
+.player {
+    margin-top:5px;
+    border-radius: 170px 170px;
+    width:50px;
+    height: 50px;
+    display: inline-block;
+    
+}
+button{
+    margin-top: 10px;
+    height: 30px;
+    color: cyan;
+    border: 1px solid rgb(93, 16, 16);
+    background-color: salmon;
+   
+}
+
+
+.d-flex{
+display: flex;
+
+
+
+>>>>>>> 74640b446c2d5dc657977750ff8c2e7432831979
 }
