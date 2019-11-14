@@ -1,16 +1,22 @@
-/* table{
+body{
+    text-align:center;
+}
+table {
     margin: auto;
-    border: 25px solid rgb(184, 24, 24);
+
     
 }
 
 td {
     margin: auto;
-    border: 3px solid black;
+    background: rgb(182, 169, 169);
     border-radius: 50px;
     height:60px ;
     width:60px ;
     text-align: center;
+}
+td:hover{
+   opacity: 0.5;
 }
 
 tr {
@@ -35,26 +41,12 @@ button{
     border: 1px solid rgb(93, 16, 16);
     background-color: salmon;
    
-} */
+}
 
 
-#game table {
-    border: 15px blue outset;
-    background-color: blue;
-}
-#game td {
-    width: 2cm;
-    height: 2cm;
-    margin: 0px;
-    padding: 0px;
-    border: 2px blue inset;
-    border-radius: 2cm;
-    background-color: white;
-    cursor: pointer;
-}
-#game td.player1 {
-    background-color: red;
-}
-#game td.player2 {
-    background-color: yellow;
+.d-flex{
+display: flex;
+
+
+
 }
