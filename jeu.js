@@ -88,11 +88,10 @@ function verifVictoire(i,j){
 }
 
 // Initialisation
-let colonne=5;
-let ligne=5;
+let colonne=7;
+let ligne=6;
 let board=new Array();
 let contenuElt=document.getElementById('contenu');
-
 let player=1;
 
 let boutonElt = document.getElementById('newGame');
