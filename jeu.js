@@ -152,11 +152,13 @@ class Puissance4 {
       this.element.addEventListener('click', (event) => this.handle_click(event));
       // On fait l'affichage
       this.render();
+      console.log(this.render);
     }
     
     /* Affiche le plateau de jeu dans le DOM */
     render() {
       let table = document.createElement('table');
+      console.log(table)
       //ATTENTION, la page html est écrite de haut en bas. Les indices 
       //pour le jeu vont de bas en haut (compteur i de la boucle)
       for (let i = this.rows - 1; i >= 0; i--) {
