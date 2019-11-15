@@ -373,7 +373,7 @@ function colonneRemplie() {
 //Fonction fin de jeu
 function endgame() {
     if (compteur == 0) {
-        document.querySelector('.row').innerHTML = "Match Nul";
+        document.location.href = "level2.html"
     }
 }
 
