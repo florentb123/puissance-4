@@ -218,9 +218,9 @@ function verifColonne() {
             document.querySelector(`#x${x}y${j+3}`).color == color) {
 
             if (playerActive == 1){
-                document.location.href = "victoire.html";
+                document.location.href = "level2.html";
             } else {
-                document.location.href = "defaite.html";
+                document.location.href = "level2.html";
             }
 
         }
@@ -239,9 +239,9 @@ function verifLigne() {
             document.querySelector(`#x${k+3}y${y}`).color == color) {
 
             if (playerActive == 1){
-                document.location.href = "victoire.html";
+                document.location.href = "level2.html";
             } else {
-                document.location.href = "defaite.html";
+                document.location.href = "level2.html";
             }
         }
         k++;
@@ -271,9 +271,9 @@ function verifDiagonaleSlach() {
                 document.querySelector(`#x${j+3}y${k+3}`).color == color) {
 
                 if (playerActive == 1){
-                        document.location.href = "victoire.html";
+                        document.location.href = "level2.html";
                 } else {
-                    document.location.href = "defaite.html";
+                    document.location.href = "level2.html";
                 }
             }
             j++;
@@ -305,9 +305,9 @@ function verifDiagonaleBackSlash() {
                 document.querySelector(`#x${j+3}y${k-3}`).color == color) {
 
                 if (playerActive == 1){
-                     document.location.href = "victoire.html";
+                     document.location.href = "level2.html";
                 } else {
-                    document.location.href = "defaite.html";
+                    document.location.href = "level2.html";
                 }
             }
             j++;
@@ -350,7 +350,7 @@ function colonneRemplie() {
 //Fonction fin de jeu
 function endgame() {
     if (compteur == 0) {
-        document.location.href = "partie-nulle.html"
+        document.location.href = "level2.html"
     }
 }
 
