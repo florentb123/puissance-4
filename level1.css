@@ -2,9 +2,12 @@ body{
     text-align:center;
 }
 table {
-    margin: auto;
-
-    
+    margin: auto; 
+}
+p{
+    color:a13d3d;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
 }
 
 td {
@@ -17,6 +20,7 @@ td {
 }
 td:hover{
    opacity: 0.5;
+
 }
 
 tr {
@@ -25,6 +29,8 @@ tr {
     border-radius: 50px;
     height: 50px;
 }
+
+
 
 .player {
     margin-top:5px;
@@ -39,14 +45,12 @@ button{
     height: 30px;
     color: cyan;
     border: 1px solid rgb(93, 16, 16);
-    background-color: salmon;
-   
+    border-radius:5px ;
+    background-color: #a13d3d;  
 }
-
-
 .d-flex{
-    display: flex;
-    flex-direction: row;
-   align-items: center;
-   margin: 10px auto;
+display: flex;
+
+
+
 }
