@@ -54,7 +54,7 @@ display: flex;
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    background: url(/medias/black-1072366_1920.jpg) no-repeat center;
+    background : url(../medias/black-1072366_1920.jpg) no-repeat center;
     background-size: cover;
     min-height: 100vh;
     line-height: 1.5;
@@ -76,3 +76,8 @@ body {
     font-size: 1.1rem;
 }
 
+.bloc {
+    background-color: rgba(21,31,39,0.8);
+    padding: 25px;
+    border-radius: 25px;
+}
