@@ -83,3 +83,20 @@ h2 {
    border: 4px solid transparent;
 }
 
+.btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #a13d3d;
+    border-color: #a13d3d;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem #a13d3d;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color:#a13d3d;
+    border-color: #a13d3d;
+}
+
+
