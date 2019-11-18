@@ -1,5 +1,5 @@
 body{
-    background-image: url(../rootprojet/media/bg.png);
+    background-image: url(../media/bg.png);
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     background-size: cover;
@@ -14,7 +14,7 @@ body{
 
 
 .fixed-top {
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
     left: 0;
@@ -34,9 +34,6 @@ body{
     font-size: 1.5rem;
 }
 
-.titre-jeu {
-    margin-top: -80px;
-}
 .text-white {
     color: #fff;
 }
@@ -67,8 +64,6 @@ p {
     background-color: #3f3f4187;
     padding: 25px;
     border-radius: 25px;
-    margin-top:100px;
-    margin-bottom: 60px;
 }
 
 h2 {
