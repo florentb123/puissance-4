@@ -1,26 +1,43 @@
-body{
-    background:url(media/bg.png);
-  }
-  
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two");
+@font-face {
+  font-family: "Fontastique";
+  src: url("../fonts/Fontastique-Fontastique.woff2") format("woff2"), url("../fonts/Fontastique-Fontastique.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*General*/
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  background: url("media/bg.png") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+}   
   h1{
     text-align:center;
-    margin-bottom:5px;
-    font-size: 48px;
-    color: white;
+    font-family: "Lobster Two", cursive;
+    font-size: 5rem;
+    text-shadow: 0px 1px 0px white;
+    color:white;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   
   #game-base{
-    width:640px;  
+    width:800px;  
     margin:0 auto;
     padding-top:60px;
   }
   
   #game-table{
-    width:600px;
-    height:500px;
+    width:900px;
+    height:800px;
     margin:0 auto;
     position:relative;
     margin-left: 90px;
+    
   }
   
   .disc{
@@ -28,17 +45,134 @@ body{
     z-index:-1;
     top:-55px;
     left:14px;
-    width:60px;
-    height:60px;
     border-radius:46px;
     transition:all .3s;
-    background-color: rgb(182, 169, 169);
+   
   }
   
   .disc.red{
     background-color:#a13d3d;
+    width:72px;
+    height:72px;
+  }
+  .disc.red:hover{
+      opacity: 0.5;
   }
   
   .disc.yellow{
     background-color:#241f1f;
+    width:72px;
+    height:72px;
   }
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:600;);
+  .snip1573 {
+    background-color: #000;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 10px;
+    max-width: 315px;
+    min-width: 230px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .snip1573 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  
+  .snip1573:before,
+  .snip1573:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    background-color: #000000;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    content: '';
+    opacity: 0.9;
+    z-index: 1;
+  }
+  
+  .snip1573:before {
+    -webkit-transform: skew(45deg) translateX(-155%);
+    transform: skew(45deg) translateX(-155%);
+  }
+  
+  .snip1573:after {
+    -webkit-transform: skew(45deg) translateX(155%);
+    transform: skew(45deg) translateX(155%);
+  }
+  
+  .snip1573 img {
+    backface-visibility: hidden;
+    max-width: 100%;
+    vertical-align: top;
+  }
+  
+  .snip1573 figcaption {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    -webkit-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
+  }
+  
+  .snip1573 h3 {
+    background-color: #000000;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+  }
+  
+  .snip1573 a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+  
+  .snip1573:hover > img,
+  .snip1573.hover > img {
+    opacity: 0.5;
+  }
+  
+  .snip1573:hover:before,
+  .snip1573.hover:before {
+    -webkit-transform: skew(45deg) translateX(-55%);
+    transform: skew(45deg) translateX(-55%);
+  }
+  
+  .snip1573:hover:after,
+  .snip1573.hover:after {
+    -webkit-transform: skew(45deg) translateX(55%);
+    transform: skew(45deg) translateX(55%);
+  }
+  
+  .snip1573:hover figcaption,
+  .snip1573.hover figcaption {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
