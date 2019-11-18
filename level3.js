@@ -191,4 +191,3 @@ function prepareField(){
 function moveit(who,where){
     document.getElementById('d'+who).style.top = where+'px';
 }
-
