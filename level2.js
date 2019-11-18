@@ -11,7 +11,6 @@ let playerActive;
 let x;
 let y;
 let i = 0;
-
 //Initialisation au chargement de la page
 window.addEventListener('DOMContentLoaded', function init() {
     playerActive = 1;
@@ -220,12 +219,12 @@ function verifColonne() {
                 text1 = document.querySelector('.row')
                 text1.innerHTML = "victoire".toUpperCase()
                 text1.style.color = "yellow"
-                text1.style.fontSize = "170"
+                text1.style.fontSize = "100"
             } else {
                 text2 = document.querySelector('.row')
                 text2.innerHTML="défaite".toUpperCase()
                 text2.style.color="red"
-                text2.style.fontSize="170"
+                text2.style.fontSize="100"
             }
 
         }
