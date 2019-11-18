@@ -215,11 +215,17 @@ function verifColonne() {
           document.querySelector(`#x${x}y${j+2}`).color == color &&
           document.querySelector(`#x${x}y${j+3}`).color == color) {
 
-          if (playerActive == 1){
-              document.location.href = "level3.html";
-          } else {
-              document.location.href = "level3.html";
-          }
+            if (playerActive == 1) {
+                text1 = document.querySelector('.row')
+                text1.innerHTML = "victoire".toUpperCase()
+                text1.style.color = "yellow"
+                text1.style.fontSize = "170"
+            } else {
+                text2 = document.querySelector('.row')
+                text2.innerHTML="défaite".toUpperCase()
+                text2.style.color="red"
+                text2.style.fontSize="170"
+            }
 
       }
       j++;
@@ -236,11 +242,17 @@ function verifLigne() {
           document.querySelector(`#x${k+2}y${y}`).color == color &&
           document.querySelector(`#x${k+3}y${y}`).color == color) {
 
-          if (playerActive == 1){
-              document.location.href = "level3.html";
-          } else {
-              document.location.href = "level3.html";
-          }
+            if (playerActive == 1) {
+                text1 = document.querySelector('.row')
+                text1.innerHTML = "victoire".toUpperCase()
+                text1.style.color = "yellow"
+                text1.style.fontSize = "170"
+            } else {
+                text2 = document.querySelector('.row')
+                text2.innerHTML="défaite".toUpperCase()
+                text2.style.color="red"
+                text2.style.fontSize="170"
+            }
       }
       k++;
   } while (k < 4);
@@ -268,11 +280,17 @@ function verifDiagonaleSlach() {
               document.querySelector(`#x${j+2}y${k+2}`).color == color &&
               document.querySelector(`#x${j+3}y${k+3}`).color == color) {
 
-              if (playerActive == 1){
-                      document.location.href = "level3.html";
-              } else {
-                  document.location.href = "level3.html";
-              }
+                if (playerActive == 1) {
+                    text1 = document.querySelector('.row')
+                    text1.innerHTML = "victoire".toUpperCase()
+                    text1.style.color = "yellow"
+                    text1.style.fontSize = "170"
+                } else {
+                    text2 = document.querySelector('.row')
+                    text2.innerHTML="défaite".toUpperCase()
+                    text2.style.color="red"
+                    text2.style.fontSize="170"
+                }
           }
           j++;
           k++;
@@ -302,11 +320,17 @@ function verifDiagonaleBackSlash() {
               document.querySelector(`#x${j+2}y${k-2}`).color == color &&
               document.querySelector(`#x${j+3}y${k-3}`).color == color) {
 
-              if (playerActive == 1){
-                   document.location.href = "level3.html";
-              } else {
-                  document.location.href = "level3.html";
-              }
+                if (playerActive == 1) {
+                    text1 = document.querySelector('.row')
+                    text1.innerHTML = "victoire".toUpperCase()
+                    text1.style.color = "yellow"
+                    text1.style.fontSize = "170"
+                } else {
+                    text2 = document.querySelector('.row')
+                    text2.innerHTML="défaite".toUpperCase()
+                    text2.style.color="red"
+                    text2.style.fontSize="170"
+                }
           }
           j++;
           k--;

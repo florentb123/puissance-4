@@ -1,0 +1,522 @@
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two");
+@font-face {
+  font-family: "Fontastique";
+  src: url("../fonts/Fontastique-Fontastique.woff2") format("woff2"), url("../fonts/Fontastique-Fontastique.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*General*/
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  background: url("./media/bg.png") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 0;
+}
+
+/*Textes*/
+h1 {
+  font-family: "Fontastique";
+  font-size: 3rem;
+}
+
+.h2-0-100 {
+  padding-top: 130px;
+}
+
+.h2-pro-maths {
+  padding-top: 110px;
+}
+
+.titre-jeu {
+  margin-top: -80px;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.h2-page-regle {
+  padding-top: 20px;
+}
+
+.text-victoire-defaite {
+  font-size: 7rem;
+  padding-top: 40px;
+}
+
+.text-bravo-dommage {
+  font-size: 1.5rem;
+  padding-bottom: 40px;
+  margin-top: -20px;
+}
+
+@media (max-width: 767px) {
+  .h2-0-100, .h2-pro-maths {
+    padding-top: 50px;
+  }
+
+  .h2-page-regle {
+    padding-top: 0;
+  }
+
+  .text-victoire-defaite {
+    font-size: 4rem;
+  }
+
+  .text-bravo-dommage {
+    font-size: 1rem;
+  }
+
+  .titre-jeu {
+    margin-top: -30px;
+  }
+}
+@media (max-width: 350px) {
+  .text-victoire-defaite {
+    font-size: 2.5rem;
+  }
+}
+/*Nav*/
+.navbar-collapse {
+  font-size: 1.1rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 0;
+  }
+}
+.nav-link-table {
+  padding-right: 0 !important;
+}
+
+.bg-light {
+  background-color: #1B6B89 !important;
+}
+
+.nav-active {
+  color: #2BB8C7 !important;
+  font-weight: 700;
+}
+
+.navbar-brand {
+  font-family: "Fontastique";
+  font-size: 1.8rem;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: #FFFFFF;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+}
+
+/*Contenu page*/
+.container-regles {
+  margin-top: 70px;
+}
+
+.contenu-page {
+  max-width: 800px;
+}
+
+@media (min-height: 700px) {
+  .contenu-page {
+    margin-top: 6vh;
+  }
+}
+@media (min-height: 750px) {
+  .contenu-page {
+    margin-top: 9vh;
+  }
+}
+@media (min-height: 850px) {
+  .contenu-page {
+    margin-top: 15vh;
+  }
+}
+@media (min-height: 1000px) {
+  .contenu-page {
+    margin-top: 20vh;
+  }
+}
+/*Colonnes puissance4*/
+/*Cercles puissance4*/
+.content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.circle {
+  display: block;
+  width: 80%;
+  padding-bottom: 80%;
+  border-radius: 80%;
+  background-color: #b6a9a9;
+  margin: auto;
+}
+
+.circle:hover {
+  opacity: 0.5;
+}
+
+.circle-player {
+  display: block;
+  width: 80%;
+  padding-bottom: 50%;
+  border-radius: 80%;
+  margin: auto;
+}
+
+.circle-player-2 {
+  background-color: #241f1f;
+}
+
+.text-player {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .circle {
+    display: block;
+    width: 10px;
+    padding-bottom: 10px;
+    border-radius: 50%;
+    background-color: #b6a9a9;
+    margin: auto;
+    margin-left: -5px;
+  }
+}
+@media (max-width: 575px) {
+  .circle-player {
+    width: 80%;
+    padding-bottom: 80%;
+  }
+}
+@media (max-width: 346px) {
+  .col-2 {
+    flex: 0 0 13%;
+    max-width: 13%;
+  }
+
+  .col-1 {
+    flex: 0 0 6%;
+    max-width: 6%;
+  }
+
+  .circle-player {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+}
+@media (max-width: 314px) {
+  .col-2 {
+    display: none;
+  }
+}
+/*Boutons*/
+.btn-lien {
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #a13d3d;
+  border: 0;
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding-left: 2%;
+  padding-right: 2%;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.btn-lien:hover {
+  background-color: #151F27;
+  transition-duration: 0.5s;
+}
+
+.btn-lien:focus {
+  background-color: #151F27 !important;
+  box-shadow: none !important;
+}
+
+.btn-lien:disabled {
+  background-color: red !important;
+}
+
+.bouton-text {
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 6px;
+  font-size: 1.2rem;
+}
+
+.container-buttons {
+  max-width: 800px;
+}
+
+@media (max-width: 350px) {
+  .btn-lien, .bouton-text {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 310px) {
+  .btn-lien, .bouton-text {
+    font-size: 0.8rem;
+  }
+}
+@media (max-height: 500px) {
+  .container-buttons {
+    padding-bottom: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg-1 {
+    flex: 0 0 50%;
+    max-width: 90px;
+  }
+}
+/*Regles jeu*/
+.fa-circle {
+  font-size: 0.4rem;
+}
+
+.p-regles-jeu {
+  margin-bottom: 0.2rem;
+  line-height: 1rem;
+}
+
+.bloc {
+  background-color: rgba(21, 31, 39, 0.8);
+  padding: 25px;
+  border-radius: 25px;
+}
+
+.contenu-page-standard {
+  max-width: 900px;
+  margin-top: 150px;
+}
+
+@media (min-height: 700px) {
+  .contenu-page-standard {
+    margin-top: 26vh;
+  }
+}
+@media (min-height: 750px) {
+  .contenu-page-standard {
+    margin-top: 28vh;
+  }
+}
+@media (min-height: 850px) {
+  .contenu-page-standard {
+    margin-top: 32vh;
+  }
+}
+@media (min-height: 1000px) {
+  .contenu-page-standard {
+    margin-top: 34vh;
+  }
+}
+@media (max-width: 596px) {
+  .row-standard {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .titre-regles {
+    margin-top: -70px;
+  }
+}
+@media (max-height: 680px) {
+  .container-buttons-page-standard {
+    padding-bottom: 100px;
+  }
+}
+/*Defaite*/
+.bloc-rouge {
+  background-color: rgba(221, 38, 39, 0.8);
+}
+
+/*Plus ou moins*/
+.bloc-chiffre {
+  height: 76px;
+}
+
+.input-number {
+  border: 0;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.input-number:focus {
+  background-color: rgba(21, 31, 39, 0.8);
+  box-shadow: none !important;
+}
+
+.entrez-nombre {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.blocAffichageText {
+  background-color: rgba(21, 31, 39, 0.8);
+  border-radius: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 100px;
+}
+
+.container-buttons-plus-ou-moins {
+  padding-bottom: 60px;
+}
+
+/*Page accueil*/
+.contenu-home {
+  margin-top: 160px;
+}
+
+.h1-home {
+  font-size: 4rem;
+}
+
+.bloc-home {
+  background-color: rgba(21, 31, 39, 0.8);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 25px;
+}
+
+.lien-home {
+  text-decoration: none !important;
+  transition-duration: 1.5s;
+}
+
+.lien-home:hover {
+  background: rgba(41, 184, 199, 0.5);
+  transition-duration: 1.5s;
+}
+
+.lien-home:hover .text-jeu-home {
+  color: #FFFFFF !important;
+  transition-duration: 1.5s;
+}
+
+.text-jeu-home {
+  transition-duration: 1.5s;
+}
+
+@media (max-width: 767px) {
+  .h1-home {
+    font-size: 3rem;
+  }
+
+  .container-buttons-home {
+    padding-bottom: 100px;
+  }
+}
+@media (min-height: 700px) {
+  .contenu-home {
+    margin-top: 27vh;
+  }
+}
+@media (min-height: 750px) {
+  .contenu-home {
+    margin-top: 29vh;
+  }
+}
+@media (min-height: 850px) {
+  .contenu-home {
+    margin-top: 32vh;
+  }
+}
+@media (min-height: 1000px) {
+  .contenu-home {
+    margin-top: 35vh;
+  }
+}
+/*Tables multiplication*/
+.select-table {
+  background-color: #151F27;
+  border-radius: 25px;
+  border: 0;
+  padding-left: 25px;
+  font-size: 1.1rem;
+  height: 50px;
+}
+
+.select-table:focus {
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.btn-valider {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.calculs {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.valeurMultiplication {
+  text-align: center;
+  border: solid 1px white;
+  border-radius: 25px;
+  width: 100px;
+  color: #FFFFFF;
+  background: transparent;
+  margin-left: 5px;
+}
+
+.valeurMultiplication:focus {
+  outline: none !important;
+}
+
+.container-buttons-multiplications {
+  padding-bottom: 100px;
+}
+
+.col-puissance4 {
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+h1 {
+  font-family: "Lobster Two", cursive;
+  font-size: 5rem;
+  text-shadow: 0px 1px 0px white;
+  color: #343434;
+}
+
+@keyframes pulse {
+  25% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=level3.css.map */
