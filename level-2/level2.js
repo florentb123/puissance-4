@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', function init() {
     compteur = 42;
     tourJoueur();
 
+    
     //Ecoute du clic sur les colonnes
     const colonne1 = document.querySelector(".colonne1");
     const colonne2 = document.querySelector(".colonne2");
