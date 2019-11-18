@@ -190,6 +190,7 @@ function iteration6() {
     }
 };
 
+
 //Fonction de verification de victoire
 function verifGg() {
     verifColonne();
