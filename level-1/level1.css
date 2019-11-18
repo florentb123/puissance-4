@@ -1,5 +1,6 @@
 body{
     text-align:center;
+    background: url(../media/bg.png) no-repeat center;
 }
 table {
     margin: auto; 
