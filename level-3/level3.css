@@ -11,7 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  background: url("./media/bg.png") no-repeat center;
+  background: url("../media/bg.png") no-repeat center;
   background-size: cover;
   min-height: 100vh;
 }
