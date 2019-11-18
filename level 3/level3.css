@@ -13,9 +13,11 @@
 body {
 	font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    background: url('media/bg.png') no-repeat center;
     background-size: cover;
-    min-height: 100vh;
+    background-image: url(../media/bg.png);
+    font-family: 'Open Sans', sans-serif;
+    color:#a13d3d;
+   
 }
 
 .container {
@@ -42,9 +44,6 @@ h2 {
     padding-top: 110px;
 }
 
-.titre-jeu {
-    margin-top: -80px;
-}
 
 p {
     font-size: 1rem;
