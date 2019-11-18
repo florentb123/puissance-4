@@ -1,385 +1,189 @@
-//Variables
-const colonne = document.querySelectorAll('.col-puissance4');
-const nouvellePartie = document.querySelector('.btn-NouvellePartie');
-const colonnePlayer1 = document.querySelector('.col-player-1');
-const colonnePlayer2 = document.querySelector('.col-player-2');
-const nombreJetons = document.querySelector(".bouton-text");
-let color;
-let colorActive;
-let compteur;
-let playerActive;
-let x;
-let y;
-let i = 0;
 
-//Initialisation au chargement de la page
-window.addEventListener('DOMContentLoaded', function init() {
-    playerActive = 1;
-    compteur = 42;
-    tourJoueur();
-
-    //Ecoute du clic sur les colonnes
-    const colonne1 = document.querySelector(".colonne1");
-    const colonne2 = document.querySelector(".colonne2");
-    const colonne3 = document.querySelector(".colonne3");
-    const colonne4 = document.querySelector(".colonne4");
-    const colonne5 = document.querySelector(".colonne5");
-    const colonne6 = document.querySelector(".colonne6");
-    const colonne7 = document.querySelector(".colonne7");
-
-    colonne1.addEventListener("click", function () {
-        if (colonne1 === colonne1) {
-            x = 0;
-            place_jeton();
-        }
-    });
-
-    colonne2.addEventListener("click", function () {
-        if (colonne2 === colonne2) {
-            x = 1;
-            place_jeton();
-        }
-    });
-
-    colonne3.addEventListener("click", function () {
-        if (colonne3 === colonne3) {
-            x = 2;
-            place_jeton();
-        }
-    });
-
-    colonne4.addEventListener("click", function () {
-        if (colonne4 === colonne4) {
-            x = 3;
-            place_jeton();
-        }
-    });
-
-    colonne5.addEventListener("click", function () {
-        if (colonne5 === colonne5) {
-            x = 4;
-            place_jeton();
-        }
-    });
-
-    colonne6.addEventListener("click", function () {
-        if (colonne6 === colonne6) {
-            x = 5;
-            place_jeton();
-        }
-    });
-
-    colonne7.addEventListener("click", function () {
-        if (colonne7 === colonne7) {
-            x = 6;
-            place_jeton();
-        }
-    })
- });
-
-//Fonction de changement de joueurs
-function tourJoueur() {
-    //Passage de joueur 1 à 2
-    if (playerActive === 1) {
-        console.log('joueur 1');
-        console.log('tour :', 42-compteur);
-        colonnePlayer1.style.opacity = "1";
-        colonnePlayer2.style.opacity = "0.5";
-        color = 'j';
-        colorActive = '#a13d3d';
-
-    //Passage de joueur 2 à 1
-    } else if (playerActive === 2) {
-        console.log('joueur 2');
-        console.log('tour :', 42-compteur);
-        colonnePlayer2.style.opacity = "1";
-        colonnePlayer1.style.opacity = "0.5";
-        color = 'r';
-        colorActive = '#241f1f';
-        randomX();
-    }
-    nombreJetons.innerHTML = ("Il reste " + compteur + " jetons");
-};
-//Fonction de positionnement du jeton dans sa colonne
-function place_jeton() {
-
-    if (document.querySelector(`#x${x}y${i}`).color == null) {
-        document.querySelector(`#x${x}y${i}`).color = color;
-        document.querySelector(`#x${x}y${i}`).style.backgroundColor = colorActive;
-        y = i;
-        compteur--;
-        verifGg();
-    } else {
-        i++;
-        iteration2();
-    }
-
-};
-
-//Iteration 2
-function iteration2() {
-    if (document.querySelector(`#x${x}y${i}`).color == null) {
-        document.querySelector(`#x${x}y${i}`).color = color;
-        document.querySelector(`#x${x}y${i}`).style.backgroundColor = colorActive;
-        y = i;
-        compteur--;
-        verifGg();
-    } else {
-        i++;
-        iteration3();
-    }
-
-};
-
-//Iteration 3
-function iteration3() {
-    if (document.querySelector(`#x${x}y${i}`).color == null) {
-        document.querySelector(`#x${x}y${i}`).color = color;
-        document.querySelector(`#x${x}y${i}`).style.backgroundColor = colorActive;
-        y = i;
-        compteur--;
-        verifGg();
-
-    } else {
-        i++;
-        iteration4();
-    }
-
-};
-
-//Iteration 4
-function iteration4() {
-    if (document.querySelector(`#x${x}y${i}`).color == null) {
-        document.querySelector(`#x${x}y${i}`).color = color;
-        document.querySelector(`#x${x}y${i}`).style.backgroundColor = colorActive;
-        y = i;
-        compteur--;
-        verifGg();
-    } else {
-        i++;
-        iteration5();
-    }
-};
-
-//Iteration 5
-function iteration5() {
-    if (document.querySelector(`#x${x}y${i}`).color == null) {
-        document.querySelector(`#x${x}y${i}`).color = color;
-        document.querySelector(`#x${x}y${i}`).style.backgroundColor = colorActive;
-        y = i;
-        compteur--;
-        verifGg();
-    } else {
-        i++;
-        iteration6();
-    }
-};
-
-//Iteration 6
-function iteration6() {
-    if (document.querySelector(`#x${x}y${i}`).color == null) {
-        document.querySelector(`#x${x}y${i}`).color = color;
-        document.querySelector(`#x${x}y${i}`).style.backgroundColor = colorActive;
-        y = i;
-        i = 0;
-        compteur--;
-        verifGg();
-    } else if (i = 6) {
-        window.alert("Colonne remplie");
-        colonneRemplie();
-    }
-};
-
-//Fonction de verification de victoire
-function verifGg() {
-    verifColonne();
-    verifLigne();
-    verifDiagonaleSlach();
-    verifDiagonaleBackSlash();
-    basculeJoueur();
-};
-
-//Verification de victoire en colonne
-function verifColonne() {
-    let j = 0
-
-    do {
-        if (document.querySelector(`#x${x}y${j}`).color == color &&
-            document.querySelector(`#x${x}y${j+1}`).color == color &&
-            document.querySelector(`#x${x}y${j+2}`).color == color &&
-            document.querySelector(`#x${x}y${j+3}`).color == color) {
-
-                if (playerActive === 1) {
-                    text1 = document.querySelector('.row')
-                    text1.innerHTML = "joueur rouge gagne".toUpperCase()
-                    text1.style.color = "red"
-                    text1.style.fontSize = "80"
-                    text1.style.textAlign ="center"
-                } else {
-                    text2 = document.querySelector('.row')
-                    text2.innerHTML="joueur jaune gagne".toUpperCase()
-                    text2.style.color="yellow"
-                    text2.style.fontSize="80"
-                    text1.style.textAlign ="center"
-                }
-
-        }
-        j++;
-    } while (j < 3);
-};
-
-//Verification de victoire en ligne
-function verifLigne() {
-    let k = 0
-
-    do {
-        if (document.querySelector(`#x${k}y${y}`).color == color &&
-            document.querySelector(`#x${k+1}y${y}`).color == color &&
-            document.querySelector(`#x${k+2}y${y}`).color == color &&
-            document.querySelector(`#x${k+3}y${y}`).color == color) {
-
-                if (playerActive === 1) {
-                    text1 = document.querySelector('.row')
-                    text1.innerHTML = "joueur rouge gagne".toUpperCase()
-                    text1.style.color = "red"
-                    text1.style.fontSize = "80"
-                    text1.style.textAlign ="center"
-                } else {
-                    text2 = document.querySelector('.row')
-                    text2.innerHTML="joueur jaune gagne".toUpperCase()
-                    text2.style.color="yellow"
-                    text2.style.fontSize="80"
-                    text1.style.textAlign ="center"
-                }
-        }
-        k++;
-    } while (k < 4);
-};
-
-//Verification de victoire en diagonale dans le sens "slash"
-function verifDiagonaleSlach() {
-
-    let j = x;
-    let k = y;
-
-    //Initialisation des valeurs x et y pour la verification de la diagonale 
-    if (j != 0 && k != 0) {
-        while (j != 0 && k != 0) {
-            j--;
-            k--;
+function createBoard(ligne,colonne){
+    // On vide l'affichage
+    contenuElt.innerHTML="";
+    // On crée l'élément table du DOM
+    let tableElt=document.createElement('table');
+    // Chaque case est un élément du tableau à deux dimensions
+    // On parcours les lignes
+    for (let i=0; i<ligne;i++){
+        // Deuxième dimension du tableau
+        board[i]=new Array();
+        // Element tr du DOM
+        let ligneElt=document.createElement('tr');
+        ligneElt.id="L"+i;
+        // On parcours les colonnes de la ligne
+        for (let j=0; j<colonne; j++){
+            // Chaque case est initialisée à 0
+            board[i][j]=0;
+            // Element td du DOM
+            let colonneElt=document.createElement('td');
+            colonneElt.id="L"+i+"C"+j;
+            // Ajout des colonnes à la ligne
+            ligneElt.appendChild(colonneElt);
         };
-    }
+        // Ajout des lignes au tableau
+        tableElt.appendChild(ligneElt);
+    };
+    // ajout du tableau au contenu
+    contenuElt.appendChild(tableElt);
+}
 
-    //Boucle de verification de la diagonale Slash
-    if (j < 4 && k < 3) {
-        do {
-            if (document.querySelector(`#x${j}y${k}`).color == color &&
-                document.querySelector(`#x${j+1}y${k+1}`).color == color &&
-                document.querySelector(`#x${j+2}y${k+2}`).color == color &&
-                document.querySelector(`#x${j+3}y${k+3}`).color == color) {
 
-                    if (playerActive === 1) {
-                        text1 = document.querySelector('.row')
-                        text1.innerHTML = "joueur rouge gagne".toUpperCase()
-                        text1.style.color = "red"
-                        text1.style.fontSize = "80"
-                        text1.style.textAlign ="center"
-                    } else {
-                        text2 = document.querySelector('.row')
-                        text2.innerHTML="joueur jaune gagne".toUpperCase()
-                        text2.style.color="yellow"
-                        text2.style.fontSize="80"
-                        text1.style.textAlign ="center"
-                    }
-            }
-            j++;
-            k++;
-        } while (j < 3 && k < 3);
-    }
-};
+// Fonction d'initialisation d'une nouvelle partie
+function newGame(){
+    createBoard(ligne,colonne);
+    createEvent(ligne,colonne);
+}
 
-//Verification en diagonale dans le sens "back slash"
-function verifDiagonaleBackSlash() {
 
-    let j = x;
-    let k = y;
-
-    //Initialisation des valeurs x et y pour la verification de la diagonale 
-    if (j != 0 && k != 5) {
-        while (j != 0 && k != 5) {
-            j--;
-            k++;
+// Fonction d'ajout des évènement click sur le tableau
+function createEvent(ligne,colonne){
+    // On créé les évènements sur les cases
+    for (let i=0; i<ligne;i++){
+        for (let j=0; j<colonne; j++){
+            //ajoutEventCase(i,j);
+            let caseElt=document.getElementById("L"+i+"C"+j);
+            caseElt.addEventListener('click',clickEvent);
         };
-    }
+    };
+}
 
-    //Boucle de verification de la diagonale backSlash
-    if (j < 4 && k > 2) {
-        do {
-            if (document.querySelector(`#x${j}y${k}`).color == color &&
-                document.querySelector(`#x${j+1}y${k-1}`).color == color &&
-                document.querySelector(`#x${j+2}y${k-2}`).color == color &&
-                document.querySelector(`#x${j+3}y${k-3}`).color == color) {
-
-                    if (playerActive === 1) {
-                        text1 = document.querySelector('.row')
-                        text1.innerHTML = "joueur rouge gagne".toUpperCase()
-                        text1.style.color = "red"
-                        text1.style.fontSize = "80"
-                        text1.style.textAlign ="center"
-                    } else {
-                        text2 = document.querySelector('.row')
-                        text2.innerHTML="joueur jaune gagne".toUpperCase()
-                        text2.style.color="yellow"
-                        text2.style.fontSize="80"
-                        text1.style.textAlign ="center"
-                    }
+// Fonction clickEvent
+function clickEvent(){
+    let l=Number(this.id.charAt(3));
+    let k=ligne-1;
+        while (k>-1){
+            if (board[k][l]==0){
+                let caseMinElt=document.getElementById("L"+k+"C"+l);
+                let divElt=document.createElement('div');
+                divElt.className="player";
+                caseMinElt.appendChild(divElt);
+                divElt.style.backgroundColor=player==1?"#a13d3d":"#241f1f";
+                board[k][l]=player;
+                // Ici placé la vérification de victoire
+                verifVictoire(k,l);
+                player*=-1;
+                k=-1;
             }
-            j++;
-            k--;
-        } while (j < 4 && k > 2);
-    }
-};
-
-//Fonction changement de joueur
-function basculeJoueur() {
-    //Verifie si il reste des tours
-    endgame();
-    //Change la valeur du joueur actif
-    if (playerActive === 2) {
-        playerActive = 1;
-    } else if (playerActive === 1) {
-        playerActive = 2;
-    }
-    //Reinitialise le compteur de tours du place jeton
-    i = 0;
-    //Rappel le tour joueur
-    tourJoueur();
+            else {
+            k--
+            };
+        };
 }
 
-function colonneRemplie() {
-    //Verifie si il reste des tours
-    endgame();
-    //Ne change pas la valeur du joueur actif
-    if (playerActive === 1) {
-        playerActive = 1;
-    } else if (playerActive === 2) {
-        playerActive = 2;
+
+// Fonction de Vérification de victoire
+
+function verifVictoire(i,j){
+    // Vérification horizontale
+    let countLigne=0;
+    let h=0;
+    while (h<colonne){
+        if (board[i][h]==player){
+            countLigne++;
+            h++;
+        }
+        else if (board[i][h]!==player&&countLigne==4){
+            h++;
+        }
+        else {
+            countLigne=0;
+            h++;
+        };
+    };
+    
+    // Vérification verticale
+    let countColonne=0;
+    let v=0;
+    while (v<ligne){
+        if (board[v][j]==player){
+            countColonne++;
+            v++;
+        }
+        else if (board[v][j]!==player&&countColonne==4){
+            v++;
+        }
+        else {
+            countColonne=0;
+            v++;
+        };
+    };
+    
+    // Vérification diagonale
+    let countDiag=0;
+    let d=-Math.min(i,j);
+    
+    while(i+d<ligne&&j+d<colonne&&i+d>=0&&j+d>=0){
+        
+        if (board[i+d][j+d]==player){
+            countDiag++;
+            d++;
+        }
+        else if (board[i+d][j+d]!==player&&countDiag==4){
+            d++;
+        }
+        else {
+            countDiag=0;
+            d++;
+        };
+    };
+    
+    // Vérification anti-diagonale
+    let countAntiDiag=0;
+    let a=-Math.min(i,colonne-1-j);
+    while(i+a<ligne&&j-a<colonne&&i+a>=0&&j-a>=0){
+        if (board[i+a][j-a]==player){
+            countAntiDiag++;
+            a++;
+        }
+        else if (board[i+a][j-a]!==player&&countAntiDiag==4){
+            a++;
+        }
+        else {
+            countAntiDiag=0;
+            a++;
+        };
+    } ;
+    
+    
+    // Affichage Résultat
+    if (countLigne>=4||countColonne>=4||countDiag>=4||countAntiDiag>=4){
+        
+        victoire=true;
+        // Affichage Vainqueur
+        let gagnant=(player==1)?"Rouge":"Noir";
+        let victoireElt=document.createElement('div');
+        victoireElt.innerHTML="<h2>Le vainqueur est "+gagnant+" </h2>";
+        contenuElt.appendChild(victoireElt);
+        // On supprime les évènements clics
+        for (let i=0; i<ligne;i++){
+            for (let j=0; j<colonne; j++){
+               let caseElt=document.getElementById("L"+i+"C"+j);
+                caseElt.style.backgroundColor="#b6a9a9";
+                caseElt.removeEventListener('click',clickEvent);
+              
+            };
+        };
+       
     }
-    //Reinitialise le compteur de tours du place jeton
-    i = 0;
-    //Rappel le tour joueur
-    tourJoueur();
+    else {
+        console.log("tour suivant");
+        // Affichage Tour suivant 
+    };
 }
 
-//Fonction fin de jeu
-function endgame() {
-    if (compteur == 0) {
-        document.location.href = "defaite.html"
-    }
-}
+// Initialisation
+let colonne=7;
+let ligne=6;
+let board=new Array();
+let contenuElt=document.getElementById('contenu');
+let player=1;
 
-//Fonction reset
-nouvellePartie.addEventListener('click', (event) => {
-    console.log(nouvellePartie);
-    window.location.reload();
-})
+let boutonElt = document.getElementById('newGame');
+// Ajout d'un gestionnaire pour l'événement click
+boutonElt.addEventListener("click", function(){
+    // Joueur 1 est le joueur rouge
+    player=1;
+    newGame();
+});
