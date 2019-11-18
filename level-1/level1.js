@@ -209,7 +209,19 @@ function verifColonne() {
             document.querySelector(`#x${x}y${j+2}`).color == color &&
             document.querySelector(`#x${x}y${j+3}`).color == color) {
 
-            document.location.href = "victoire.html";
+                if (playerActive === 1) {
+                    text1 = document.querySelector('.row')
+                    text1.innerHTML = "joueur rouge gagne".toUpperCase()
+                    text1.style.color = "red"
+                    text1.style.fontSize = "80"
+                    text1.style.textAlign ="center"
+                } else {
+                    text2 = document.querySelector('.row')
+                    text2.innerHTML="joueur jaune gagne".toUpperCase()
+                    text2.style.color="yellow"
+                    text2.style.fontSize="80"
+                    text1.style.textAlign ="center"
+                }
 
         }
         j++;
@@ -226,7 +238,19 @@ function verifLigne() {
             document.querySelector(`#x${k+2}y${y}`).color == color &&
             document.querySelector(`#x${k+3}y${y}`).color == color) {
 
-            document.location.href = "victoire.html";
+                if (playerActive === 1) {
+                    text1 = document.querySelector('.row')
+                    text1.innerHTML = "joueur rouge gagne".toUpperCase()
+                    text1.style.color = "red"
+                    text1.style.fontSize = "80"
+                    text1.style.textAlign ="center"
+                } else {
+                    text2 = document.querySelector('.row')
+                    text2.innerHTML="joueur jaune gagne".toUpperCase()
+                    text2.style.color="yellow"
+                    text2.style.fontSize="80"
+                    text1.style.textAlign ="center"
+                }
         }
         k++;
     } while (k < 4);
@@ -254,7 +278,19 @@ function verifDiagonaleSlach() {
                 document.querySelector(`#x${j+2}y${k+2}`).color == color &&
                 document.querySelector(`#x${j+3}y${k+3}`).color == color) {
 
-                    document.location.href = "victoire.html";
+                    if (playerActive === 1) {
+                        text1 = document.querySelector('.row')
+                        text1.innerHTML = "joueur rouge gagne".toUpperCase()
+                        text1.style.color = "red"
+                        text1.style.fontSize = "80"
+                        text1.style.textAlign ="center"
+                    } else {
+                        text2 = document.querySelector('.row')
+                        text2.innerHTML="joueur jaune gagne".toUpperCase()
+                        text2.style.color="yellow"
+                        text2.style.fontSize="80"
+                        text1.style.textAlign ="center"
+                    }
             }
             j++;
             k++;
@@ -284,7 +320,19 @@ function verifDiagonaleBackSlash() {
                 document.querySelector(`#x${j+2}y${k-2}`).color == color &&
                 document.querySelector(`#x${j+3}y${k-3}`).color == color) {
 
-                    document.location.href = "victoire.html";
+                    if (playerActive === 1) {
+                        text1 = document.querySelector('.row')
+                        text1.innerHTML = "joueur rouge gagne".toUpperCase()
+                        text1.style.color = "red"
+                        text1.style.fontSize = "80"
+                        text1.style.textAlign ="center"
+                    } else {
+                        text2 = document.querySelector('.row')
+                        text2.innerHTML="joueur jaune gagne".toUpperCase()
+                        text2.style.color="yellow"
+                        text2.style.fontSize="80"
+                        text1.style.textAlign ="center"
+                    }
             }
             j++;
             k--;
