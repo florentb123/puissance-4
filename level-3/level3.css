@@ -9,21 +9,74 @@
 }
 /*General*/
 body {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  background: url("../media/bg.png") no-repeat center;
-  background-size: cover;
-  min-height: 100vh;
-}
-
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    background: url("../media/bg.png");
+    background-size: cover;
+    min-height: 100vh;
+  }
+  
 .container {
   padding: 0;
-}
+} 
+  h1{
+    text-align:center;
+    font-family: "Lobster Two", cursive;
+    font-size: 5rem;
+    text-shadow: 0px 1px 0px white;
+  }
+  #game-base{
+    width:800px;  
+    margin:0 auto;
+    padding-top:0;
+  }
+  
+  #game-table{
+     width:660px;
+    height:560px;
+     margin:0 auto;
+    position:relative;
+    
+  }
+  
+  .disc{
+    position:absolute;
+    z-index:-1;
+    top:-55px;
+    left:14px;
+    border-radius:46px;
+    transition:all .3s;
+   
+  }
+  
+  .disc.red{
+    background-color:#a13d3d;
+    width:72px;
+    height:72px;
+  }
+  .disc.red:hover{
+      opacity: 0.5;
+  }
+  
+  .disc.yellow{
+    background-color:#241f1f;
+    width:72px;
+    height:72px;
+  }
+  
+
+
 
 /*Textes*/
 h1 {
   font-family: "Fontastique";
   font-size: 3rem;
+}
+
+h2 {
+  color: #2BB8C7;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .h2-0-100 {
@@ -519,4 +572,6 @@ h1 {
   }
 }
 
-/*# sourceMappingURL=level3.css.map */
+
+
+  
