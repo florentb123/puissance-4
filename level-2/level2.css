@@ -67,7 +67,10 @@ p {
 
     justify-content: flex-end;
 }
-
+nav a:hover{
+  opacity: 0.6;
+  transition: 0.5s;
+  }
 
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 1.5rem;
