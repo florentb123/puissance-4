@@ -269,17 +269,14 @@ p {
   font-size: 1.5rem;
 }
 
+.col-1 {
+  flex: 0 0 6%;
+  max-width: 6%;
+}
 
-
-
-  .col-1 {
-    flex: 0 0 6%;
-    max-width: 6%;
-  }
-
-  .circle-player {
-    width: 100%;
-    padding-bottom: 100%;
+.circle-player {
+  width: 100%;
+  padding-bottom: 100%;
   }
 
 
