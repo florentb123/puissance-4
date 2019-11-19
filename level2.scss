@@ -17,7 +17,6 @@ body {
     background-size: cover;
     min-height: 100vh;
 }
-
 .container {
     padding: 0;
 }
@@ -55,29 +54,8 @@ p {
     margin-top: -20px;
 }
 
-@media (max-width: 767px) { 
-    .h2-0-100, .h2-pro-maths {
-        padding-top: 50px;
-    }
-    .h2-page-regle {
-        padding-top: 0;
-    }
-    .text-victoire-defaite {
-        font-size: 4rem;
-    }
-    .text-bravo-dommage {
-        font-size: 1rem;
-    }
-    .titre-jeu {
-        margin-top: -30px;
-    }
-}
 
-@media (max-width: 350px) { 
-    .text-victoire-defaite {
-        font-size: 2.5rem;
-    }
-}
+
 
 /*Nav*/
 .navbar-collapse {
@@ -88,12 +66,11 @@ p {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
 }
-
-@media (max-width: 768px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-left: 0;
-    }
+.col-lg-1 {
+    flex: 0 0 50%;
+    max-width: 13.33333%;
 }
+
 
 .nav-link-table {
     padding-right: 0 !important;
@@ -134,29 +111,6 @@ p {
     max-width: 800px;
 }
 
-@media (min-height: 700px) { 
-    .contenu-page {
-        margin-top: 6vh;
-    }
-}
-
-@media (min-height: 750px) { 
-    .contenu-page {
-        margin-top: 9vh;
-    }
-}
-
-@media (min-height: 850px) { 
-    .contenu-page {
-        margin-top: 15vh;
-    }
-}
-
-@media (min-height: 1000px) { 
-    .contenu-page {
-        margin-top: 20vh;
-    }
-}
 
 /*Colonnes puissance4*/
 
@@ -169,8 +123,8 @@ p {
 
 .circle {
 	display: block;
-    width: 80%;
-	padding-bottom: 80%;
+    width: 72px;
+	padding-bottom: 72px;
 	border-radius: 80%;
 	background-color: rgb(182, 169, 169);
 	margin: auto;
@@ -181,8 +135,8 @@ p {
 
 .circle-player {
 	display: block;
-	width: 80%;
-	padding-bottom: 50%;
+	width: 72px;
+	padding-bottom: 72px;
 	border-radius: 80%;
 	
 	margin: auto;
@@ -197,52 +151,15 @@ p {
     font-size: 1.5rem;
 }
 
-@media (max-width: 576px) { 
-    .circle {
-        display: block;
-        width: 10px;
-        padding-bottom: 10px;
-        border-radius: 50%;
-        background-color: rgb(182, 169, 169);
-        margin: auto;
-        margin-left: -5px;
-    } 
-}
 
-@media (max-width: 575px) { 
-    .circle-player {
-        width: 80%;
-        padding-bottom: 80%;
-    }
-}
 
-@media (max-width: 346px) { 
-    .col-2 {
-        flex: 0 0 13%;
-        max-width: 13%;
-    }
-    .col-1 {
-        flex: 0 0 6%;
-        max-width: 6%;
-    }
-    .circle-player {
-        width: 100%;
-        padding-bottom: 100%;
-    }
-}
-
-@media (max-width: 314px) { 
-    .col-2 {
-        display: none;
-    }
-}
 
 /*Boutons*/
 .btn-lien {
     border-radius: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #a13d3d;
+    background-color:#f52929;
     border: 0;
     font-weight: 300;
     font-size: 1.2rem;
@@ -277,28 +194,7 @@ p {
     max-width: 800px;
 }
 
-@media (max-width: 350px) { 
-    .btn-lien, .bouton-text {
-        font-size: 1rem;
-    }
-}
 
-@media (max-width: 310px) { 
-    .btn-lien, .bouton-text {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-height: 500px) { 
-    .container-buttons {
-        padding-bottom: 100px;
-    }
-}
-@media (min-width: 992px){
-.col-lg-1 {
-    flex: 0 0 50%;
-    max-width: 90px;
-}}
 
 /*Regles jeu*/
 .fa-circle {
@@ -321,48 +217,7 @@ p {
     margin-top: 150px;
 }
 
-@media (min-height: 700px) { 
-    .contenu-page-standard {
-        margin-top: 26vh;
-    }
-}
 
-@media (min-height: 750px) { 
-    .contenu-page-standard {
-        margin-top: 28vh;
-    }
-}
-
-@media (min-height: 850px) { 
-    .contenu-page-standard {
-        margin-top: 32vh;
-    }
-}
-
-@media (min-height: 1000px) { 
-    .contenu-page-standard {
-        margin-top: 34vh;
-    }
-}
-
-@media (max-width: 596px) { 
-    .row-standard {
-        width: 90%;
-        margin: auto;
-    }
-}
-
-@media (max-width: 767px) {
-    .titre-regles {
-        margin-top: -70px;
-    }
-}
-
-@media (max-height: 680px) {
-    .container-buttons-page-standard {
-        padding-bottom: 100px;
-    }
-}
 
 /*Defaite*/
 .bloc-rouge {
@@ -440,38 +295,7 @@ p {
     transition-duration: 1.5s;
 }
 
-@media (max-width: 767px) {
-    .h1-home {
-        font-size: 3rem;
-    }
-    .container-buttons-home {
-        padding-bottom: 100px;
-    }
-}
 
-@media (min-height: 700px) { 
-    .contenu-home {
-        margin-top: 27vh;
-    }
-}
-
-@media (min-height: 750px) { 
-    .contenu-home {
-        margin-top: 29vh;
-    }
-}
-
-@media (min-height: 850px) { 
-    .contenu-home {
-        margin-top: 32vh;
-    }
-}
-
-@media (min-height: 1000px) { 
-    .contenu-home {
-        margin-top: 35vh;
-    }
-}
 
 /*Tables multiplication*/
 .select-table {
@@ -541,5 +365,245 @@ padding-right: 0%;
       }
       
   }
+  @media(max-width:1199.98px){
+    .contenu-page {
+        margin-top: 20vh;
+    }
+
+    
+        .contenu-page-standard {
+            margin-top: 34vh;
+        }
+    
+
+
+        .contenu-home {
+            margin-top: 35vh;
+        }
+    
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:991.98px){
+
+.col-lg-1 {
+    flex: 0 0 50%;
+    max-width: 13.33333%
+}
+
+
+.contenu-page-standard {
+    margin-top: 32vh;
+}
+
+
+.contenu-page {
+    margin-top: 15vh;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 0;
+}
+
+
+    .contenu-home {
+        margin-top: 32vh;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:767.98px){
+    .contenu-page {
+        margin-top: 9vh;
+    }
+    .circle {
+        display: block;
+        width: 50px;
+        padding-bottom: 50px;
+        border-radius: 50%;
+        background-color: #b6a9a9;
+        margin: auto;
+        margin-left: auto;
+    } 
+        .contenu-page-standard {
+            margin-top: 26vh;
+        }
+    
+    
+ 
+   
+
+        .titre-regles {
+            margin-top: -70px;
+        }
+    
+    
+
+        .container-buttons-page-standard {
+            padding-bottom: 100px;
+        }
+    
+
+        .h1-home {
+            font-size: 3rem;}
+    
+    
+    
+   
+        .contenu-home {
+            margin-top: 27vh;
+        }
+            .h2-0-100, .h2-pro-maths {
+                padding-top: 50px;
+            }
+            .h2-page-regle {
+                padding-top: 0;
+            }
+            .text-victoire-defaite {
+                font-size: 4rem;
+            }
+            .text-bravo-dommage {
+                font-size: 1rem;
+            }
+            .titre-jeu {
+                margin-top: -30px;
+            }
+        
+    
+
+}
+
+
+
+
+
+@media (max-width: 575.98px) { 
+.circle {
+    display: block;
+    width: 45px;
+    padding-bottom: 45px;
+    border-radius: 50%;
+    background-color: #b6a9a9;
+    margin: auto;
+    margin-left: auto;
+} 
+.circle-player {
+    width: 72px;
+    padding-bottom: 72px;
+}
+.col-2 {
+    flex: 0 0 13%;
+    max-width: 13%;
+}
+.col-1{
+    max-width: 13.333333%;
+}
+.circle-player {
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.btn-lien, .bouton-text {
+    font-size: 1rem;
+}
+.btn-lien, .bouton-text {
+    font-size: 0.8rem;
+}
+.container-buttons {
+    padding-bottom: 100px;
+}
+
+.row-standard {
+    width: 90%;
+    margin: auto;
+}
+.content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+}
   
+  @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+  height: 100%;
+  font-weight: 800;
+}
+
+body{
+  background: #030321;
+  font-family: Arial;
+}
+
+svg {
+    display: block;
+    font: 5em 'Montserrat';
+    width: 960px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
  

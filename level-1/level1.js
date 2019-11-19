@@ -1,3 +1,4 @@
+
 //Variables
 const colonne = document.querySelectorAll('.col-puissance4');
 const nouvellePartie = document.querySelector('.btn-NouvellePartie');
@@ -86,7 +87,7 @@ function tourJoueur() {
         colonnePlayer1.style.opacity = "1";
         colonnePlayer2.style.opacity = "0.5";
         color = 'j';
-        colorActive = '#a13d3d';
+        colorActive = '#f52929';
 
     //Passage de joueur 2 à 1
     } else if (playerActive === 2) {
@@ -95,7 +96,7 @@ function tourJoueur() {
         colonnePlayer2.style.opacity = "1";
         colonnePlayer1.style.opacity = "0.5";
         color = 'r';
-        colorActive = '#efd807';
+        colorActive = '#FDB731';
         randomX();
     }
     nombreJetons.innerHTML = ("Il reste " + compteur + " jetons");
@@ -220,7 +221,7 @@ function verifColonne() {
                     text2.innerHTML="joueur jaune gagne".toUpperCase()
                     text2.style.color="yellow"
                     text2.style.fontSize="80"
-                    text1.style.textAlign ="center"
+                    text2.style.textAlign ="center"
                 }
 
         }
@@ -239,17 +240,17 @@ function verifLigne() {
             document.querySelector(`#x${k+3}y${y}`).color == color) {
 
                 if (playerActive === 1) {
-                    text1 = document.querySelector('.row')
-                    text1.innerHTML = "joueur rouge gagne".toUpperCase()
-                    text1.style.color = "red"
-                    text1.style.fontSize = "80"
-                    text1.style.textAlign ="center"
+                    text1 = document.querySelector('.row');
+                    text1.innerHTML = "joueur rouge gagne".toUpperCase();
+                    text1.style.color = "red";
+                    text1.style.fontSize = "80";
+                    text1.style.textAlign ="center";
                 } else {
-                    text2 = document.querySelector('.row')
-                    text2.innerHTML="joueur jaune gagne".toUpperCase()
-                    text2.style.color="yellow"
-                    text2.style.fontSize="80"
-                    text1.style.textAlign ="center"
+                    text2 = document.querySelector('.row');
+                    text2.innerHTML="joueur jaune gagne".toUpperCase();
+                    text2.style.color="yellow";
+                    text2.style.fontSize="80";
+                    text2.style.textAlign ="center";
                 }
         }
         k++;
@@ -289,7 +290,7 @@ function verifDiagonaleSlach() {
                         text2.innerHTML="joueur jaune gagne".toUpperCase()
                         text2.style.color="yellow"
                         text2.style.fontSize="80"
-                        text1.style.textAlign ="center"
+                        text2.style.textAlign ="center"
                     }
             }
             j++;
@@ -331,7 +332,7 @@ function verifDiagonaleBackSlash() {
                         text2.innerHTML="joueur jaune gagne".toUpperCase()
                         text2.style.color="yellow"
                         text2.style.fontSize="80"
-                        text1.style.textAlign ="center"
+                        text2.style.textAlign ="center"
                     }
             }
             j++;

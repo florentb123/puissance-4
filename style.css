@@ -1,5 +1,5 @@
 body{
-    background-image: url(../media/bg.png);
+    background-image: url(./media/bg.png);
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     background-size: cover;
@@ -15,7 +15,7 @@ body{
 
 
 .fixed-top {
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
     left: 0;
