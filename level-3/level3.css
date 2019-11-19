@@ -29,8 +29,8 @@ body {
     
     svg {
     display: block;
-    font: 4em 'Montserrat';
-    width: 960px;
+    font: 5em 'Montserrat';
+    width: 100vh;
     height: 90px;
     margin: 0 auto;
     }
@@ -513,6 +513,12 @@ h1 {
   }
 }
 @media (max-width: 767.98px) {
+  .svg{
+width:100vw;
+  }
+
+
+  
   .disc.red{
     background-color:#a13d3d;
     width:45px;
