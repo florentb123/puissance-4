@@ -4,7 +4,7 @@ var currentCol;
 var currentRow;
 var currentPlayer;
 var id = 1;
-btnNewGame = document.querySelector('button');
+btnNewGame = document.querySelector('#nouvellepartie');
 newgame()
 // currentPlayer.style.display = "block";
 
@@ -146,7 +146,7 @@ function Disc(player){
     if(currentPlayer == 1){
       if(possibleColumns().indexOf(currentCol) != -1){
         dropDisc($this.id,$this.player);
-        document.getElementById('d'+$this.id).style.display ="block"
+        document.getElementById('d'+$this.id).style.display ="block";
       }
     }
   }
@@ -168,6 +168,7 @@ function checkForMoveVictory(){
     board.innerHTML = ("VICTOIRE POUR " +ww);
     board.style.color = "#f52929";
     board.style.fontSize = "60px";
+    board.style.textAlign = "center";
     board.style.height = "250px";
   }
 }

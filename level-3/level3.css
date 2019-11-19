@@ -24,7 +24,6 @@ body {
     
     body{
     background: #030321;
-    font-family: Arial;
     }
     
     svg {
@@ -267,17 +266,14 @@ p {
   font-size: 1.5rem;
 }
 
+.col-1 {
+  flex: 0 0 6%;
+  max-width: 6%;
+}
 
-
-
-  .col-1 {
-    flex: 0 0 6%;
-    max-width: 6%;
-  }
-
-  .circle-player {
-    width: 100%;
-    padding-bottom: 100%;
+.circle-player {
+  width: 100%;
+  padding-bottom: 100%;
   }
 
 
@@ -550,6 +546,10 @@ height:45px;
     width:45px;
     height:45px;
   }
+  svg {
+    font: 3em "Montserrat";
+  }
+    
   .contenu-page {
     margin-top: 9vh;
   }
@@ -561,6 +561,7 @@ height:45px;
   margin: 0;
   width: 100%;
 }
+
   .circle {
     display: block;
     width: 50px;
@@ -612,16 +613,6 @@ height:45px;
   }
 }
 @media (max-width: 575.98px) {
-  .disc.red{
-    background-color:#a13d3d;
-    width:45px;
-    height:45px;
-  }
-.disc.yellow{
-    background-color:#241f1f;
-    width:45px;
-    height:45px;
-  }
   .circle {
     display: block;
     width: 45px;
