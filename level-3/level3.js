@@ -163,11 +163,11 @@ function checkForMoveVictory() {
   if (!checkForVictory(currentRow, currentCol)) {
     placeDisc(3 - currentPlayer);
   } else {
-    var ww = currentPlayer == 2 ? 'ORDINATEUR' : 'JOUEUR';
+    var ww = currentPlayer == 2 ? 'L ORDINATEUR' : 'LE JOUEUR';
     placeDisc(3 - currentPlayer);
     board.innerHTML = ("VICTOIRE POUR " +ww);
-    board.style.color = "red";
-    board.style.fontSize = "80";
+    board.style.color = "#f52929";
+    board.style.fontSize = "70";
     board.style.height = "250";
   }
 }
