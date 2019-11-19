@@ -21,6 +21,10 @@ body {
   padding: 0;
 }
 
+.fixed-top {
+  position: relative;
+}
+
 /*Textes*/
 h1 {
   font-family: "Fontastique";
@@ -90,10 +94,7 @@ p {
 .navbar-collapse {
   font-size: 1.1rem;
 }
-nav a:hover{
-  opacity: 0.6;
-  transition: 0.5s;
-  }
+
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
@@ -111,7 +112,7 @@ nav a:hover{
 .bg-light {
   background-color: #1B6B89 !important;
 }
- 
+
 .nav-active {
   color: #2BB8C7 !important;
   font-weight: 700;
