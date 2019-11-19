@@ -4,10 +4,9 @@ var currentCol;
 var currentRow;
 var currentPlayer;
 var id = 1;
-
-newgame();
-
-currentPlayer.style.display = "block";
+btnNewGame = document.querySelector('button');
+newgame()
+// currentPlayer.style.display = "block";
 
 function newgame() {
   prepareField();
@@ -164,13 +163,11 @@ function checkForMoveVictory() {
   if (!checkForVictory(currentRow, currentCol)) {
     placeDisc(3 - currentPlayer);
   } else {
-    var ww = currentPlayer == 2 ? 'Computer' : 'Player';
+    var ww = currentPlayer == 2 ? 'ordinateur' : 'player';
     placeDisc(3 - currentPlayer);
-    // alert(ww+" win!");
-
-    board.innerHTML = "";
-    message()
-    // newgame();
+    board.innerHTML = ("VICTOIRE" ;
+    // alert(ww+" a gagné!");
+    newgame();
   }
 }
 
@@ -193,3 +190,9 @@ function prepareField() {
 function moveit(who, where) {
   document.getElementById('d' + who).style.top = where + 'px';
 }
+
+//Fonction reset
+btnNewGame.addEventListener('click', (event) => {
+  console.log(btnNewGame);
+  window.location.reload();
+})
