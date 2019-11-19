@@ -163,9 +163,9 @@ function checkForMoveVictory() {
   if (!checkForVictory(currentRow, currentCol)) {
     placeDisc(3 - currentPlayer);
   } else {
-    var ww = currentPlayer == 2 ? 'ordinateur' : 'player';
+    var ww = currentPlayer == 2 ? 'ORDINATEUR' : 'JOUEUR';
     placeDisc(3 - currentPlayer);
-    board.innerHTML = ("VICTOIRE" ;
+    board.innerHTML = ("VICTOIRE POUR " +ww);
     // alert(ww+" a gagné!");
     newgame();
   }
