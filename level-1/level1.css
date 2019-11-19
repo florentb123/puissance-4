@@ -44,7 +44,10 @@ h2 {
 p {
   font-size: 1rem;
 }
-
+.fixed-top{
+  position: relative;
+  background-color:#a13d3d;
+}
 .h2-page-regle {
   padding-top: 20px;
 }
@@ -91,6 +94,11 @@ p {
 .navbar-brand {
   font-family: "Fontastique";
   font-size: 1.8rem;
+}
+
+.navbar>.container{
+
+    justify-content: flex-end;
 }
 
 .navbar-light .navbar-toggler {
