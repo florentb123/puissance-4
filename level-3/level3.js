@@ -166,8 +166,9 @@ function checkForMoveVictory() {
     var ww = currentPlayer == 2 ? 'ORDINATEUR' : 'JOUEUR';
     placeDisc(3 - currentPlayer);
     board.innerHTML = ("VICTOIRE POUR " +ww);
-    // alert(ww+" a gagné!");
-    newgame();
+    board.style.color = "red";
+    board.style.fontSize = "80";
+    board.style.height = "250";
   }
 }
 
