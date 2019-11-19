@@ -76,6 +76,12 @@ body {
 .container {
   padding: 0;
 } 
+
+.fixed-top{
+    position: relative;
+    background-color:#a13d3d;
+  }
+
   h1{
     text-align:center;
     font-family: "Lobster Two", cursive;
@@ -194,6 +200,12 @@ p {
 .navbar-brand {
   font-family: "Fontastique";
   font-size: 1.8rem;
+}
+
+
+.navbar>.container{
+
+    justify-content: flex-end;
 }
 
 .navbar-light .navbar-toggler {
