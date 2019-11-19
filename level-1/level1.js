@@ -87,7 +87,7 @@ function tourJoueur() {
         colonnePlayer1.style.opacity = "1";
         colonnePlayer2.style.opacity = "0.5";
         color = 'j';
-        colorActive = '#a13d3d';
+        colorActive = '#f52929';
 
     //Passage de joueur 2 à 1
     } else if (playerActive === 2) {
@@ -96,7 +96,7 @@ function tourJoueur() {
         colonnePlayer2.style.opacity = "1";
         colonnePlayer1.style.opacity = "0.5";
         color = 'r';
-        colorActive = '#241f1f';
+        colorActive = '#FDB731';
         randomX();
     }
     nombreJetons.innerHTML = ("Il reste " + compteur + " jetons");
