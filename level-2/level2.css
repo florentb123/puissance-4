@@ -16,6 +16,10 @@ body {
   min-height: 100vh;
 }
 
+.fixed-top{
+    position: relative;
+    background-color:#a13d3d;
+  }
 
 .container {
   padding: 0;
