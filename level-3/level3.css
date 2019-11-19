@@ -24,7 +24,6 @@ body {
     
     body{
     background: #030321;
-    font-family: Arial;
     }
     
     svg {
@@ -117,12 +116,10 @@ transition: 0.5s;
   
   .disc.red{
     background-color:#f52929;
-    width:72px;
-    height:72px;
+width:72px;
+height:72px;
   }
-  .disc.red:hover{
-      opacity: 0.5;
-  }
+
   
   .disc.yellow{
     background-color:#fdb731;
@@ -269,17 +266,14 @@ p {
   font-size: 1.5rem;
 }
 
+.col-1 {
+  flex: 0 0 6%;
+  max-width: 6%;
+}
 
-
-
-  .col-1 {
-    flex: 0 0 6%;
-    max-width: 6%;
-  }
-
-  .circle-player {
-    width: 100%;
-    padding-bottom: 100%;
+.circle-player {
+  width: 100%;
+  padding-bottom: 100%;
   }
 
 
@@ -504,6 +498,18 @@ h1 {
   .contenu-home {
     margin-top: 35vh;
   }
+  .disc.red{
+    background-color:#f52929;
+width:55px;
+height:55px;
+  }
+
+  
+  .disc.yellow{
+    background-color:#fdb731;
+    width:55px;
+    height:55px;
+  }
 }
 @media (max-width: 991.98px) {
   .col-lg-1 {
@@ -529,15 +535,21 @@ h1 {
 }
 @media (max-width: 767.98px) {
   .disc.red{
-    background-color:#a13d3d;
+    background-color:#f52929;
+width:45px;
+height:45px;
+  }
+
+  
+  .disc.yellow{
+    background-color:#fdb731;
     width:45px;
     height:45px;
   }
-.disc.yellow{
-    background-color:#241f1f;
-    width:45px;
-    height:45px;
+  svg {
+    font: 3em "Montserrat";
   }
+    
   .contenu-page {
     margin-top: 9vh;
   }
@@ -549,6 +561,7 @@ h1 {
   margin: 0;
   width: 100%;
 }
+
   .circle {
     display: block;
     width: 50px;
@@ -600,16 +613,6 @@ h1 {
   }
 }
 @media (max-width: 575.98px) {
-  .disc.red{
-    background-color:#a13d3d;
-    width:45px;
-    height:45px;
-  }
-.disc.yellow{
-    background-color:#241f1f;
-    width:45px;
-    height:45px;
-  }
   .circle {
     display: block;
     width: 45px;
