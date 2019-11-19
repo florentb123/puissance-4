@@ -117,12 +117,10 @@ transition: 0.5s;
   
   .disc.red{
     background-color:#f52929;
-    width:72px;
-    height:72px;
+width:72px;
+height:72px;
   }
-  .disc.red:hover{
-      opacity: 0.5;
-  }
+
   
   .disc.yellow{
     background-color:#fdb731;
@@ -504,6 +502,18 @@ h1 {
   .contenu-home {
     margin-top: 35vh;
   }
+  .disc.red{
+    background-color:#f52929;
+width:55px;
+height:55px;
+  }
+
+  
+  .disc.yellow{
+    background-color:#fdb731;
+    width:55px;
+    height:55px;
+  }
 }
 @media (max-width: 991.98px) {
   .col-lg-1 {
@@ -529,12 +539,14 @@ h1 {
 }
 @media (max-width: 767.98px) {
   .disc.red{
-    background-color:#a13d3d;
-    width:45px;
-    height:45px;
+    background-color:#f52929;
+width:45px;
+height:45px;
   }
-.disc.yellow{
-    background-color:#241f1f;
+
+  
+  .disc.yellow{
+    background-color:#fdb731;
     width:45px;
     height:45px;
   }

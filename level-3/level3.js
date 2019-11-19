@@ -167,8 +167,8 @@ function checkForMoveVictory(){
     placeDisc(3 - currentPlayer);
     board.innerHTML = ("VICTOIRE POUR " +ww);
     board.style.color = "#f52929";
-    board.style.fontSize = "70";
-    board.style.height = "250";
+    board.style.fontSize = "60px";
+    board.style.height = "250px";
   }
 }
 
