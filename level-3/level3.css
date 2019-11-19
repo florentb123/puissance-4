@@ -24,7 +24,6 @@ body {
     
     body{
     background: #030321;
-    font-family: Arial;
     }
     
     svg {
@@ -540,6 +539,7 @@ h1 {
   margin: 0;
   width: 100%;
 }
+
   .circle {
     display: block;
     width: 50px;
