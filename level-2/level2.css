@@ -88,6 +88,11 @@ p {
 .navbar-collapse {
   font-size: 1.1rem;
 }
+.navbar>.container{
+
+    justify-content: flex-end;
+}
+
 
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 1.5rem;

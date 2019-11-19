@@ -120,9 +120,12 @@ p {
 .navbar-brand {
   font-family: "Fontastique";
   font-size: 1.8rem;
-
 }
-background-color:#a13d3d;
+
+.navbar>.container{
+
+    justify-content: flex-end;
+}
 
 .navbar-light .navbar-toggler {
   border-color: #FFFFFF;

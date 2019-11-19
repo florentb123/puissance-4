@@ -173,6 +173,12 @@ p {
   font-size: 1.8rem;
 }
 
+
+.navbar>.container{
+
+    justify-content: flex-end;
+}
+
 .navbar-light .navbar-toggler {
   border-color: #FFFFFF;
 }
