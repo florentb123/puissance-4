@@ -29,7 +29,7 @@ body {
     
     svg {
     display: block;
-    font: 4em 'Montserrat';
+    font: 5em 'Montserrat';
     width: 960px;
     height: 90px;
     margin: 0 auto;
@@ -76,7 +76,10 @@ body {
 .container {
   padding: 0;
 } 
-
+nav a:hover{
+opacity: 0.6;
+transition: 0.5s;
+}
 .fixed-top{
     position: relative;
     background-color:#a13d3d;
