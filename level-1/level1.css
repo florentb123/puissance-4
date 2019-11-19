@@ -44,7 +44,10 @@ h2 {
 p {
   font-size: 1rem;
 }
-
+.fixed-top{
+  position: relative;
+  background-color:#a13d3d;
+}
 .h2-page-regle {
   padding-top: 20px;
 }
@@ -64,7 +67,10 @@ p {
 .navbar-collapse {
   font-size: 1.1rem;
 }
-
+nav a:hover{
+  opacity: 0.6;
+  transition: 0.5s;
+  }
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
@@ -82,7 +88,7 @@ p {
 .bg-light {
   background-color: #1B6B89 !important;
 }
-
+ 
 .nav-active {
   color: #2BB8C7 !important;
   font-weight: 700;
@@ -91,6 +97,11 @@ p {
 .navbar-brand {
   font-family: "Fontastique";
   font-size: 1.8rem;
+}
+
+.navbar>.container{
+
+    justify-content: flex-end;
 }
 
 .navbar-light .navbar-toggler {
